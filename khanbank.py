@@ -1,12 +1,12 @@
 import requests
 import urllib3
 
-from bs4 import BeautifulSoup
 from utils.helper import Date
-
 from settings import *
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+from bs4 import BeautifulSoup
 
 MNT = 'MNTD0000000'
 
@@ -25,8 +25,8 @@ request_data = {
     '__LASTFOCUS': '',
     '__EVENTTARGET': 'btnLogin',
     '__EVENTARGUMENT': '',
-    'txtCustNo': KHANBANK_ACCOUNT,
-    'txtPassword': KHANBANK_PASSWORD,
+    'txtCustNo': str(KHANBANK_USERNAME),
+    'txtPassword': str(KHANBANK_PASSWORD),
     'ASYNCPOST': 'true',
 }
 
